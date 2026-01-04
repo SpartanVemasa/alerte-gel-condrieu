@@ -9,13 +9,15 @@ LAT = 45.46
 LON = 4.77
 THRESHOLD = 1.0
 
-EMAIL_TO = "DESTINATAIRE_EMAIL"
-EMAIL_FROM = "EXPEDITEUR_EMAIL"
+import os
 
-SMTP_SERVER = "SMTP_SERVEUR"
-SMTP_PORT = 587
-SMTP_USER = "SMTP_USER"
-SMTP_PASS = "SMTP_PASSWORD"
+EMAIL_TO = os.environ["EMAIL_TO"]
+EMAIL_FROM = os.environ["EMAIL_FROM"]
+SMTP_SERVER = os.environ["SMTP_SERVER"]
+SMTP_PORT = int(os.environ["SMTP_PORT"])
+SMTP_USER = os.environ["SMTP_USER"]
+SMTP_PASS = os.environ["SMTP_PASS"]
+
 
 STATE_FILE = Path("last_email_sent.txt")
 TODAY = datetime.date.today().isoformat()
