@@ -80,9 +80,9 @@ msg = EmailMessage()
 
 if alert_type == "A":
     msg["Subject"] = "Alerte gel – Condrieu"
-    msg.set_content("A")
+    msg.set_content("Brancher prise chauffe-eau solaire")
 else:
-    msg["Subject"] = "Fin du risque de gel – Condrieu"
+    msg["Subject"] = "Debrancher prise chauffe-eau solaire"
     msg.set_content("B")
 
 msg["From"] = EMAIL_FROM
